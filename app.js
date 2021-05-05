@@ -27,7 +27,7 @@ app.use(express.urlencoded({ extended: true }));
 
 
 let store=new mongoDBSession({
-   uri:'mongodb://127.0.0.1:27017/LifeServers',
+   uri:process.env.MONGODB_URL,
    collection:'sessions'
 })
 

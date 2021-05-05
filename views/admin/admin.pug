@@ -1,0 +1,319 @@
+extends ../layout/layout.pug
+block content
+    <div class="sidebar" id="sidebar">
+    <div class="sidebar-inner slimscroll">
+    <div id="sidebar-menu" class="sidebar-menu">
+    <ul>
+    <li class="menu-title">Main</li>
+    <li class="active">
+    <a href="#"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a>
+    </li>
+    <li>
+    <a href="/doctors"><i class="fa fa-user-md"></i> <span>Doctors</span></a>
+    </li>
+    <li>
+    <a href="/patients"><i class="fa fa-wheelchair"></i> <span>Patients</span></a>
+    </li>
+    <li>
+    <a href="/appointments"><i class="fa fa-calendar"></i> <span>Appointments</span></a>
+    </li>
+    <li>
+    <a href="/schedule"><i class="fa fa-calendar-check-o"></i> <span>Doctor Schedule</span></a>
+    </li>
+    <li>
+    <a href="/departments"><i class="fa fa-hospital-o"></i> <span>Departments</span></a>
+    </li>
+    <li class="submenu">
+    <a href="#"><i class="fa fa-user"></i> <span> Employees </span> <span class="menu-arrow"></span></a>
+    <ul style="display: none;">
+    <li><a href="/employees">Employees List</a></li>
+    <li><a href="/leaves">Leaves</a></li>
+    <li><a href="/holidays">Holidays</a></li>
+    <li><a href="/attendance">Attendance</a></li>
+    </ul>
+    </li>
+    <li class="submenu">
+    <a href="#"><i class="fa fa-money"></i> <span> Accounts </span> <span class="menu-arrow"></span></a>
+    <ul style="display: none;">
+    <li><a href="/invoices">Invoices</a></li>
+    <li><a href="/payments">Payments</a></li>
+    <li><a href="/expenses">Expenses</a></li>
+    <li><a href="/taxes">Taxes</a></li>
+    <li><a href="admi/provident-fund">Provident Fund</a></li>
+    </ul>
+    </li>
+    <li class="submenu">
+    <a href="#"><i class="fa fa-book"></i> <span> Payroll </span> <span class="menu-arrow"></span></a>
+    <ul style="display: none;">
+    <li><a href="/salary"> Employee Salary </a></li>
+    <li><a href="/salary-view"> Payslip </a></li>
+    </ul>
+    </li>
+    <li>
+    <a href="/plaza"><i class="fa fa-comments"></i> <span>Chat</span> <span class="badge badge-pill bg-primary float-right"></span></a>
+    </li>
+
+
+    <li class="submenu">
+    <a href="#"><i class="fa fa-commenting-o"></i> <span> Blog</span> <span class="menu-arrow"></span></a>
+    <ul style="display: none;">
+    <li><a href="/">Blog</a></li>
+    <li><a href="/add-blog">add blog</a></li>
+    <li><a href="/edit-blog">Edit Blog</a></li>
+    </ul>
+    </li>
+    <li>
+    <a href="/assetsl"><i class="fa fa-cube"></i> <span>Assets</span></a>
+    </li>
+    <li>
+    <a href="/activities"><i class="fa fa-bell-o"></i> <span>Activities</span></a>
+    </li>
+    <li class="submenu">
+    <a href="#"><i class="fa fa-flag-o"></i> <span> Reports </span> <span class="menu-arrow"></span></a>
+    <ul style="display: none;">
+    <li><a href="/expense-reports"> Expense Report </a></li>
+    <li><a href="/invoice-reports"> Invoice Report </a></li>
+    </ul>
+    </li>
+    <li>
+    <a href="/settings"><i class="fa fa-cog"></i> <span>Settings</span></a>
+    </li>
+    <li>
+    <a href="calendar.html"><i class="fa fa-calendar"></i> <span>Calendar</span></a>
+    </li>
+    <li class="menu-title">Extras</li>
+    <li class="submenu">
+    <a href="#"><i class="fa fa-columns"></i> <span>Pages</span> <span class="menu-arrow"></span></a>
+    <ul style="display: none;">
+    <li><a href="login.html"> Login </a></li>
+    <li><a href="register.html"> Register </a></li>
+    <li><a href="forgot-password.html"> Forgot Password </a></li>
+    <li><a href="change-password2.html"> Change Password </a></li>
+    <li><a href="lock-screen.html"> Lock Screen </a></li>
+    <li><a href="profile.html"> Profile </a></li>
+    <li><a href="gallery.html"> Gallery </a></li>
+    <li><a href="error-404.html">404 Error </a></li>
+    <li><a href="error-500.html">500 Error </a></li>
+    <li><a href="blank-page.html"> Blank Page </a></li>
+    </ul>
+    </li>
+    </ul>
+    </li>
+    </ul>
+    </div>
+    </div>
+    </div>
+    <div class="page-wrapper">
+    <div class="content">
+    <div class="row">
+    <div class="col-md-6 col-sm-6 col-lg-6 col-xl-3">
+    <div class="dash-widget">
+    <span class="dash-widget-bg1"><i class="fa fa-stethoscope" aria-hidden="true"></i></span>
+    <div class="dash-widget-info text-right">
+    <h3>#{drlength}</h3>
+    <span class="widget-title1">Doctors <i class="fa fa-check" aria-hidden="true"></i></span>
+    </div>
+    </div>
+    </div>
+    <div class="col-md-6 col-sm-6 col-lg-6 col-xl-3">
+    <div class="dash-widget">
+    <span class="dash-widget-bg1"><i class="fa fa-wheelchair"></i></span>
+    <div class="dash-widget-info text-right">
+    <h3>#{patientlength}</h3>
+    <span class="widget-title1">Patients <i class="fa fa-check" aria-hidden="true"></i></span>
+    </div>
+    </div>
+    </div>
+    <div class="col-md-6 col-sm-6 col-lg-6 col-xl-3">
+    <div class="dash-widget">
+    <span class="dash-widget-bg1"><i class="fa fa-calendar" aria-hidden="true"></i></span>
+    <div class="dash-widget-info text-right">
+    <h3>#{appointlength}</h3>
+    <span class="widget-title1">appointments <i class="fa fa-check" aria-hidden="true"></i></span>
+    </div>
+    </div>
+    </div>
+    <div class="col-md-6 col-sm-6 col-lg-6 col-xl-3">
+    <div class="dash-widget">
+    <span class="dash-widget-bg1"><i class="fa fa-user" aria-hidden="true"></i></span>
+    <div class="dash-widget-info text-right">
+    <h3>number</h3>
+    <span class="widget-title1">employees <i class="fa fa-check" aria-hidden="true"></i></span>
+    </div>
+    </div>
+    </div>
+    </div>
+
+    <div class="row">
+    <div class="col-12 col-md-6 col-lg-6 col-xl-6">
+    <h4 class="page-title">Departments</h4>
+    </div>
+
+    <div class="col-sm-7 col-7 text-top m-b-30">
+    </div>
+    </div>
+    <div class="row">
+    <div class="col-md-12">
+    <div class="table-responsive">
+    <table class="table table-striped custom-table mb-0 datatable">
+    <thead>
+    <tr>
+        <th>#</th>
+        <th>Department Name</th>
+        <th>Status</th>
+        <th class="text-right">Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    each data in departList
+        <tr>
+            <td></td>
+            <td>#{data.department_name}</td>
+            <td><span class="custom-badge status-green">#{data.status}</span></td>
+            <td class="text-right">
+            <div class="dropdown dropdown-action">
+            <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
+            <div class="dropdown-menu dropdown-menu-right">
+            <a class="dropdown-item" href="edit-department.html"><i class="fa fa-pencil m-r-5"></i> Edit</a>
+            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_department"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
+            </div>
+            </div>
+            </td>
+        </tr>
+    </tbody>
+    </table>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="row">
+    <div class="col-12 col-md-6 col-lg-8 col-xl-8">
+    <div class="card">
+    <div class="card-header">
+    <h4 class="card-title d-inline-block">Upcoming Appointments</h4> <a href="appointments" class="btn btn-primary float-right">View all</a>
+    </div>
+    <div class="card-body p-0">
+    <div class="table-responsive">
+    <table class="table mb-0">
+    <thead class="d-none">
+        <tr>
+            <th>Patient Name</th>
+            <th>Doctor Name</th>
+            <th>Timing</th>
+            <th class="text-right">Status</th>
+        </tr>
+    </thead>
+    <tbody>
+    each doc in appointList
+        <tr>
+            <td style="min-width: 200px;">
+            <a class="avatar" href="profile.html"></a>
+            <h2><a href="user/profile">#{doc.user_name}<span>#{doc.phone_number}</span></a></h2>
+            </td>             
+            <td>
+            <h5 class="time-title p-0">Appointment With</h5>
+            <p>#{doc.staff_name}</p>
+            </td>
+            <td>
+            <h5 class="time-title p-0">Timing</h5>
+            <p>#{doc.time}</p>
+            </td>
+            <td class="text-right">
+            <a href="appointments" class="btn btn-outline-primary take-btn">Take up</a>
+            </td>
+        </tr>
+
+    </tbody>
+    </table>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-4 col-xl-4">
+    <div class="card member-panel">
+    <div class="card-header bg-white">
+    <h4 class="card-title mb-0">Doctors</h4>
+    </div>
+
+    <div class="card-body">
+        <ul class="contact-list">
+        each dr in doctorList
+            <li>
+            <div class="contact-cont">
+            <div class="float-left user-img m-r-10">
+            <a href="doctor/profile" title="John Doe"><img src="assets/img/user.jpg" alt="" class="w-40 rounded-circle"><span class="status online"></span></a>
+            </div>
+            <div class="contact-info">
+            <span class="contact-name text-ellipsis">#{dr.first_name + " "+ dr.last_name}</span>
+            <span class="contact-date">#{dr.specialist+' '+ dr.education}</span>
+            </div>
+            </div>
+            </li>
+        </ul>
+    </div>
+    <div class="card-footer text-center bg-white">
+    <a href="doctors" class="text-muted">View all Doctors</a>
+    </div>
+    </div>
+    </div>
+    </div>        
+    <div class="row">
+    <div class="col-12 col-md-6 col-lg-8 col-xl-8">
+    <div class="card">
+    <div class="card-header">
+    <h4 class="card-title d-inline-block">New Patients </h4> <a href="patients" class="btn btn-primary float-right">View all</a>
+    </div>
+    <div class="card-block">
+    <div class="table-responsive">
+    <table class="table mb-0 new-patient-table">
+    <tbody>
+    each patient in patientList
+        <tr>
+            <td>
+            <img width="28" height="28" class="rounded-circle" src="assets/img/user.jpg" alt=""> 
+            <h2>#{patient.first_name+" " +patient.last_name}</h2>
+            </td>
+            <td>#{patient.email}</td>
+            <td>#{patient.phone_no}</td>
+            <td><button class="btn btn-primary btn-primary-one float-right">#{patient.status}</button></td>
+        </tr>
+    </tbody>
+    </table>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="notification-box">
+    <div class="msg-sidebar notifications msg-noti">
+    <div class="topnav-dropdown-header">
+    <span>Messages</span>
+    </div>
+    <div class="drop-scroll msg-list-scroll" id="msg_list">
+    <ul class="list-box">
+    <li>
+    <a href="chat.html">
+    <div class="list-item">
+    <div class="list-left">
+    <span class="avatar">R</span>
+    </div>
+    <div class="list-body">
+    <span class="message-author">author name </span>
+    <span class="message-time">time</span>
+    <div class="clearfix"></div>
+    <span class="message-content">content</span>
+    </div>
+    </div>
+    </a>
+    </li>
+    </ul>
+    </div>
+    <div class="topnav-dropdown-footer">
+    <a href="/chat">See all messages</a>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="sidebar-overlay" data-reff=""></div>
+
+block scripts

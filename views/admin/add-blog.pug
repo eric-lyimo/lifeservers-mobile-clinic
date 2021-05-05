@@ -1,0 +1,56 @@
+extends ../layout/layout.pug
+block content
+    </div>
+    <div class="page-wrapper">
+    <div class="content">
+    <div class="row">
+    <div class="col-lg-8 offset-lg-2">
+    <h4 class="page-title">Add Blog</h4>
+    </div>
+    </div>
+    <div class="row">
+    <div class="col-lg-8 offset-lg-2">
+    <form action="/add-blog" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+    <label>Blog Name</label>
+    <input class="form-control" type="text" name="title">
+    </div>
+
+    <div class="form-group">
+    <label>Blog Images</label>
+    <div>
+    <input class="form-control" type="file" name="blog_img">
+    </div>
+    <div class="row">
+    </div>
+    </div>
+    <div class="row">
+    <div class="col-md-6">
+    <div class="form-group">
+    <label>Blog Category</label>
+    <input class="form-control" type="text" name="blog_category">
+    </div>
+    </div>
+    </div>
+    <div class="form-group">
+    <label>Blog Description</label>
+    <textarea cols="30" rows="6" class="form-control" name="description"></textarea>
+    </div>
+    <div class="form-group">
+    <label>Tags <small>(separated with a comma)</small></label>
+    <input type="text" placeholder="Enter your tags" data-role="tagsinput" class="form-control" name="blog_tags">
+    </div>
+
+    <div class="m-t-20 text-center">
+    <button class="btn btn-primary submit-btn">Publish Blog</button>
+    </div>
+
+    </form>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="sidebar-overlay" data-reff=""></div>
+    block scripts

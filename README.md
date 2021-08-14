@@ -27,6 +27,6 @@ from different fields of proffesional. currently were working with doctors, lawy
 
 ## reach me at riclyimo29@gmail.com
 
-navigate to lifeservers.herokuapp.com
+navigate to https://lifeservers.herokuapp.com
 
 ## note some features are not yet completed, were currently working on
